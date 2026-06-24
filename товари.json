@@ -1,0 +1,42 @@
+[
+  {
+    "id": "101",
+    "title": "Зошит А5 в клітинку 48 аркушів",
+    "category": "Зошити",
+    "price": 45.0,
+    "image": "images/notebook.jpg",
+    "description": "Якісний зошит для конспектів.",
+    "isCustomizable": false,
+    "inStock": true
+  },
+  {
+    "id": "102",
+    "title": "Ручка кулькова синя",
+    "category": "Ручки",
+    "price": 15.0,
+    "image": "images/pen.jpg",
+    "description": "М'яке письмо без пропусків.",
+    "isCustomizable": false,
+    "inStock": true
+  },
+  {
+    "id": "201",
+    "title": "Біла керамічна чашка",
+    "category": "Сублімація",
+    "price": 250.0,
+    "image": "images/mug.jpg",
+    "description": "Додайте свій принт!",
+    "isCustomizable": true,
+    "inStock": true
+  },
+  {
+    "id": "202",
+    "title": "Футболка базова",
+    "category": "Сублімація",
+    "price": 450.0,
+    "image": "images/tshirt.jpg",
+    "description": "Ідеально підходить для друку.",
+    "isCustomizable": true,
+    "inStock": false
+  }
+]

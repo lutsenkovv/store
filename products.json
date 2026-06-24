@@ -1,0 +1,62 @@
+[
+  {
+    "id": "101",
+    "title": "Зошит А5 в клітинку 48 аркушів",
+    "category": "Зошити",
+    "price": 45.0,
+    "image": "images/b9027af2-6480-11ef-a064-ecebb899e263_095165bf-655e-11ef-a064-ecebb899e263-700x700.jpg",
+    "description": "Якісний зошит для конспектів.",
+    "isCustomizable": false,
+    "inStock": true
+  },
+  {
+    "id": "102",
+    "title": "Ручка кулькова синя",
+    "category": "Ручки",
+    "price": 15.0,
+    "image": "images/ruchka-sharikovaya-ifeel-it-0-7-mm-pentel-vh-487-0.jpg",
+    "description": "М'яке письмо без пропусків.",
+    "isCustomizable": false,
+    "inStock": true
+  },
+  {
+    "id": "201",
+    "title": "Біла керамічна чашка",
+    "category": "Сублімація",
+    "price": 250.0,
+    "image": "images/mug.jpg",
+    "description": "Додайте свій принт!",
+    "isCustomizable": true,
+    "inStock": true
+  },
+  {
+    "id": "202",
+    "title": "Футболка базова",
+    "category": "Сублімація",
+    "price": 450.0,
+    "image": "images/tshirt.jpg",
+    "description": "Ідеально підходить для друку.",
+    "isCustomizable": true,
+    "inStock": true
+  },
+  {
+    "id": "103",
+    "title": "Олівці кольор. 72 кольор. \"Marco\" ",
+    "category": "Олівці",
+    "price": 547.0,
+    "image": "images/002305185-600x600.webp",
+    "description": "Велика палітра високоякісних олівців, які ідеально підходять для художників, ілюстраторів, а також любителів скетчингу та розмальовок",
+    "isCustomizable": false,
+    "inStock": true
+  },
+  {
+    "id": "301",
+    "title": "Блокнот на пружині А6 80 аркушів, клітинка",
+    "category": "Зошити",
+    "price": 49.7,
+    "image": "images/482309510-1-600x600.webp",
+    "description": "Rомпактний та практичний записник розміром 105х148 мм, який легко вміщується в кишеню чи невелику сумку. Завдяки кріпленню на спіралі, він зручно розгортається на 360 градусів для записів на вазі",
+    "isCustomizable": false,
+    "inStock": true
+  }
+]

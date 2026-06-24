@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Стильна Канцелярія та Сублімація</title>
+    <meta
+      name="description"
+      content="Унікальна канцелярія для натхнення та створення товарів з вашим власним дизайном."
+    />
+    <meta property="og:title" content="У Маринки - Стильна Канцелярія" />
+    <meta
+      property="og:description"
+      content="Унікальна канцелярія та сублімація. Створи свій дизайн!"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://via.placeholder.com/1200x630?text=Стильна+Канцелярія"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #fdfbfb;
+        color: #333;
+      }
+      .navbar {
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+      }
+      .navbar-brand {
+        color: #111 !important;
+        font-weight: 800;
+        font-size: 1.5rem;
+        letter-spacing: -0.5px;
+      }
+      .nav-btn {
+        background-color: #111;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .nav-btn:hover {
+        background-color: #444;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .nav-btn-wishlist {
+        background-color: #fff;
+        color: #111;
+        border: 2px solid #111;
+      }
+      .nav-btn-wishlist:hover,
+      .nav-btn-wishlist.active {
+        background-color: #fff0f0;
+        color: #dc3545;
+        border-color: #dc3545;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        border-radius: 24px;
+        padding: 60px 30px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      }
+      .hero-section h1 {
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 15px;
+      }
+      .hero-section p {
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        padding: 12px 20px;
+        box-shadow: none;
+        background-color: #fff;
+        transition: all 0.3s ease;
+      }
+      .form-control:focus,
+      .form-select:focus {
+        border-color: #111;
+        box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.1);
+      }
+      .form-check-input:checked {
+        background-color: #111;
+        border-color: #111;
+      }
+
+      .category-btn {
+        border-radius: 30px;
+        font-weight: 600;
+        padding: 8px 24px;
+        border: 1px solid #e0e0e0;
+        color: #555;
+        background: #fff;
+        transition: all 0.3s ease;
+      }
+      .category-btn:hover {
+        border-color: #111;
+        color: #111;
+      }
+      .category-btn.btn-dark {
+        background-color: #111;
+        color: #fff;
+        border-color: #111;
+      }
+
+      .card {
+        border: none;
+        border-radius: 20px;
+        background: #fff;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+        position: relative;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .heart-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        transition: all 0.2s ease;
+        color: #ccc;
+      }
+      .heart-btn:hover {
+        transform: scale(1.1);
+      }
+      .heart-btn.active {
+        color: #dc3545;
+      }
+
+      .card-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-top: 10px;
+      }
+      .price-tag {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: #111;
+      }
+      .btn-buy {
+        background-color: #111;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .btn-buy:hover {
+        background-color: #444;
+        transform: scale(1.05);
+      }
+      .btn-share {
+        background-color: #f8f9fa;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 10px;
+        transition: all 0.3s;
+      }
+      .btn-share:hover {
+        background-color: #e2e6ea;
+      }
+      .btn.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .floating-tg {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(135deg, #0088cc 0%, #00aaff 100%);
+        color: white;
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
+        z-index: 1000;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .floating-tg:hover {
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 136, 204, 0.6);
+        color: white;
+      }
+
+      #scrollTopBtn {
+        position: fixed;
+        bottom: 110px;
+        right: 38px;
+        background-color: #111;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        transition: all 0.3s ease;
+      }
+      #scrollTopBtn:hover {
+        background-color: #444;
+        transform: translateY(-3px);
+      }
+
+      .modal-content {
+        border-radius: 24px;
+        border: none;
+      }
+      .modal-header {
+        border-bottom: 1px solid #eee;
+        padding: 20px 30px;
+      }
+      .modal-body {
+        padding: 30px;
+      }
+
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .pop-animation {
+        animation: pop 0.3s ease;
+      }
+
+      /* Анімація Скелетону */
+      @keyframes pulseSkeleton {
+        0% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 0.3;
+        }
+        100% {
+          opacity: 0.6;
+        }
+      }
+      .skeleton-box {
+        background-color: #e0e0e0;
+        border-radius: 12px;
+        animation: pulseSkeleton 1.5s infinite;
+      }
+      .skeleton-img {
+        height: 250px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .skeleton-text {
+        height: 20px;
+        margin-bottom: 10px;
+        width: 80%;
+      }
+      .skeleton-text.short {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">У Маринки</a>
+        <div class="d-flex gap-2">
+          <button
+            class="nav-btn nav-btn-wishlist"
+            id="wishlist-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#wishlistModal"
+          >
+            🤍 (0)
+          </button>
+          <button
+            class="nav-btn"
+            id="cart-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            Кошик (0)
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="hero-section">
+        <h1>Творчість у кожній деталі</h1>
+        <p>
+          Канцелярія для натхнення та унікальні товари з вашим власним дизайном.
+        </p>
+        <button
+          class="btn btn-dark btn-lg mt-3 rounded-pill px-5 fw-bold"
+          onclick="
+            document
+              .getElementById('catalog-start')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Переглянути каталог ↓
+        </button>
+      </div>
+
+      <div id="catalog-start" class="row mb-3 g-3 align-items-center">
+        <div class="col-md-8">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="🔍 Я шукаю (наприклад: ручка, чашка)..."
+            oninput="handleSearch()"
+          />
+          <div class="form-check form-switch mt-3 ms-1">
+            <input
+              class="form-check-input border-secondary"
+              type="checkbox"
+              id="custom-filter"
+              onchange="handleCustomFilter()"
+            />
+            <label
+              class="form-check-label fw-bold text-muted"
+              for="custom-filter"
+              >Тільки товари під власний принт 🎨</label
+            >
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select id="sort-select" class="form-select" onchange="handleSort()">
+            <option value="default">Сортування: популярне</option>
+            <option value="price-asc">Ціна: від дешевих</option>
+            <option value="price-desc">Ціна: від дорогих</option>
+          </select>
+        </div>
+      </div>
+
+      <div
+        id="category-tabs"
+        class="mb-4 d-flex gap-2 flex-wrap justify-content-center"
+      ></div>
+
+      <div class="row" id="skeleton-container">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="skeleton-box skeleton-img w-100"></div>
+            <div class="card-body p-4">
+              <div class="skeleton-box skeleton-text"></div>
+              <div class="skeleton-box skeleton-text short"></div>
+              <div
+                class="mt-4 skeleton-box skeleton-text"
+                style="height: 40px; width: 100%"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="skeleton-box skeleton-img w-100"></div>
+            <div class="card-body p-4">
+              <div class="skeleton-box skeleton-text"></div>
+              <div class="skeleton-box skeleton-text short"></div>
+              <div
+                class="mt-4 skeleton-box skeleton-text"
+                style="height: 40px; width: 100%"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="skeleton-box skeleton-img w-100"></div>
+            <div class="card-body p-4">
+              <div class="skeleton-box skeleton-text"></div>
+              <div class="skeleton-box skeleton-text short"></div>
+              <div
+                class="mt-4 skeleton-box skeleton-text"
+                style="height: 40px; width: 100%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-none" id="products-container"></div>
+
+      <div class="text-center mt-2 mb-5">
+        <button
+          id="load-more-btn"
+          class="btn btn-outline-dark btn-lg px-5 d-none"
+          onclick="loadMore()"
+        >
+          Показати ще товари ↓
+        </button>
+      </div>
+    </div>
+
+    <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Ваші улюблені товари 🤍</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" id="wishlist-items">
+            <p class="text-muted text-center py-4">
+              Список бажань поки порожній.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="productModalLabel">Деталі</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" id="product-modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Ваше замовлення</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="cart-items" class="mb-4">
+              <p class="text-muted text-center py-4">
+                Кошик поки що порожній 🤍
+              </p>
+            </div>
+            <div class="text-end mb-4">
+              <h4 class="fw-bold">
+                Разом: <span id="cart-total" class="text-dark">0</span> грн
+              </h4>
+            </div>
+            <div class="bg-light p-4 rounded-4">
+              <h5 class="mb-3 fw-bold">Дані для відправки</h5>
+              <form id="checkout-form">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="client-name"
+                    placeholder="Ім'я та прізвище"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="client-phone"
+                    placeholder="Номер телефону (напр. 093...)"
+                    required
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="client-city"
+                      placeholder="Місто"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="client-branch"
+                      placeholder="№ Відділення НП"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 d-none" id="sublimation-field-container">
+                  <label for="client-print" class="form-label fw-bold mt-2"
+                    >✨ Побажання до принта:</label
+                  ><textarea
+                    class="form-control"
+                    id="client-print"
+                    rows="2"
+                    placeholder="Опишіть ідею для дизайну..."
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button
+              type="button"
+              class="btn btn-dark w-100 py-3 fw-bold rounded-3"
+              onclick="sendOrder()"
+            >
+              ПІДТВЕРДИТИ ЗАМОВЛЕННЯ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()" title="Вгору">↑</button>
+
+    <a
+      href="tg://resolve?domain=ТВІЙ_НІКНЕЙМ"
+      class="floating-tg"
+      title="Написати нам у Telegram"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        fill="currentColor"
+        class="bi bi-telegram"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.292.26.004.545-.115.853-.358.218-.172.548-.431.986-.777.439-.345.772-.519.999-.522.23-.003.468.106.716.327l.07.062c.245.215.485.424.717.632.417.373.785.703 1.247.732.226.014.453-.053.67-.197.22-.146.425-.395.53-.781.332-1.22.955-4.575 1.107-5.917.03-.263-.028-.48-.158-.65-.131-.17-.35-.25-.656-.24-.46.016-1.258.291-2.434.821z"
+        />
+      </svg>
+    </a>
+
+    <div
+      class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3"
+      style="z-index: 1100"
+    >
+      <div
+        id="liveToast"
+        class="toast align-items-center text-white border-0 shadow-lg rounded-pill"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex px-2">
+          <div
+            class="toast-body fs-6 fw-bold text-center w-100"
+            id="toast-message"
+          >
+            Повідомлення
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
